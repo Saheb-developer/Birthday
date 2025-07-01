@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8">
+  <title>📸 Sweet Memories</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      background: #fff0f8;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    h1 {
+      color: #ff1493;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+      padding: 0 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .grid img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+      transition: transform 0.3s ease;
+    }
+    .grid img:hover {
+      transform: scale(1.05);
+    }
+    .tap {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-top: 2rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📸 Yaad haru timro lagi 💞</h1>
+  <p>Yo sabai timi jasto sweetness capture garna khojeko kosis ho 😚</p>
+
+  <div class="grid">
+    <img src="https://i.imgur.com/n8bYc9z.jpeg" alt="Memory 1" onerror="this.style.display='none'">
+    <img src="https://i.imgur.com/GJwIjXk.jpeg" alt="Memory 2" onerror="this.style.display='none'">
+    <img src="https://i.imgur.com/NlTxXxA.png" alt="Memory 3" onerror="this.style.display='none'">
+    <img src="https://i.imgur.com/U3wKwqZ.png" alt="Memory 4" onerror="this.style.display='none'">
+    <img src="https://i.imgur.com/3H9C7Vo.jpeg" alt="Memory 5" onerror="this.style.display='none'">
+    <img src="https://i.imgur.com/0z9aZdz.jpeg" alt="Memory 6" onerror="this.style.display='none'">
+  </div>
+
+  <div class="tap" onclick="goNext()">👉 Tap to continue the journey...</div>
+
+  <audio autoplay loop>
+    <source src="https://www.fesliyanstudios.com/play-mp3/6672" type="audio/mpeg" />
+  </audio>
+
+  <script>
+    function goNext() {
+      window.location.href = "game.html";
+    }
+
+    // Auto move after 15 seconds
+    setTimeout(() => {
+      window.location.href = "game.html";
+    }, 15000);
+  </script>
+
+</body>
+</html>
