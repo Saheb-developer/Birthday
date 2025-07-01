@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8" />
+  <title>😂 Birthday Memes Time!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      margin: 0;
+      background: #fff5f9;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 2rem 1rem;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #ff1493;
+      margin-bottom: 1rem;
+    }
+    .gif {
+      width: 80%;
+      max-width: 300px;
+      margin: 1rem auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+    }
+    .chatbox {
+      background-color: #fbe4ef;
+      border-radius: 15px;
+      padding: 1rem;
+      max-width: 90%;
+      margin: 2rem auto;
+      text-align: left;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+    }
+    .msg {
+      background: white;
+      padding: 10px 15px;
+      margin: 10px;
+      border-radius: 20px;
+      display: inline-block;
+      max-width: 80%;
+      font-size: 1rem;
+      position: relative;
+      animation: bounceIn 0.8s ease;
+    }
+    .msg.left {
+      border-bottom-left-radius: 0;
+      background: #fff;
+    }
+    .msg.right {
+      border-bottom-right-radius: 0;
+      background: #ffe2f0;
+      float: right;
+    }
+    @keyframes bounceIn {
+      from { opacity: 0; transform: scale(0.5); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .hidden-tap {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #aaa;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>😂 Birthday Meme Time!</h1>
+
+  <!-- Funny GIFs -->
+  <img class="gif" src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="funny cat">
+  <img class="gif" src="https://media.giphy.com/media/3oz8xKaR836UJOYeOc/giphy.gif" alt="funny cake">
+  <img class="gif" src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="dancing">
+
+  <!-- Fake Chat -->
+  <div class="chatbox">
+    <div class="msg left">🎉 Happy Birthday!! Aba ta baje jasto feel aako cha 🥳</div>
+    <div class="msg right">😅 Ehh! Ma ta 1 saal thulo bhaye aba</div>
+    <div class="msg left">Gift mana chaina? 🧐</div>
+    <div class="msg right">Gift ta yo website ho ni... handmade with 💖</div>
+    <div class="msg left">Aww... cute ho! Ma jitaaa! 😘</div>
+  </div>
+
+  <div class="hidden-tap" onclick="goNext()">Tap here if you're done laughing 😜</div>
+
+  <audio autoplay loop>
+    <source src="https://www.fesliyanstudios.com/play-mp3/6514" type="audio/mpeg" />
+  </audio>
+
+  <script>
+    function goNext() {
+      window.location.href = "gallery.html";
+    }
+
+    // Or auto move after 12 sec
+    setTimeout(() => {
+      window.location.href = "gallery.html";
+    }, 600000);
+  </script>
+</body>
+</html>
