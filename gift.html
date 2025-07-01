@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8">
+  <title>🎁 Your Gift</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom right, #ffe6f0, #ffffff);
+      font-family: 'Pacifico', cursive;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #ff1493;
+      margin-bottom: 0.5rem;
+      animation: fadeIn 2s ease;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #444;
+      max-width: 90%;
+      margin-bottom: 1.5rem;
+      animation: fadeIn 3s ease;
+    }
+
+    .giftbox {
+      width: 180px;
+      height: 180px;
+      background: url('https://i.imgur.com/ut2YYPo.gif') no-repeat center/contain;
+      animation: bounce 2s infinite;
+      cursor: pointer;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .thankyou {
+      margin-top: 1.5rem;
+      font-size: 1rem;
+      color: #777;
+      display: none;
+    }
+
+    .download-btn {
+      margin-top: 1rem;
+      background: #ff1493;
+      color: white;
+      padding: 0.7rem 1.2rem;
+      border: none;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+    }
+
+    .download-btn:hover {
+      background: #ff70b4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎁 Tap the Gift Box</h1>
+  <p>Yo box bhitra timro lagi ek audio gift chha 💌</p>
+
+  <!-- Gift Box -->
+  <div class="giftbox" onclick="playGift()"></div>
+
+  <!-- Audio Element -->
+  <audio id="voice" src="your-audio.mp3"></audio> <!-- Replace with your audio file -->
+
+  <!-- Thank You Message -->
+  <p id="ty-msg" class="thankyou">💖 Hope you felt loved. Thank you for being amazing 🥰</p>
+
+  <!-- Download Option -->
+  <a href="your-audio.mp3" download>
+    <button class="download-btn">📥 Download Your Gift Audio</button>
+  </a>
+
+  <script>
+    function playGift() {
+      document.getElementById("voice").play();
+      document.getElementById("ty-msg").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
