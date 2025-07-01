@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8" />
+  <title>🍜 Food Party Time!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to right, #fff2e6, #ffe6f0);
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      margin-top: 2rem;
+      font-size: 2.2rem;
+      color: #ff4d88;
+      animation: popIn 1s ease-in-out;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 2rem;
+    }
+
+    .food {
+      position: absolute;
+      width: 100px;
+      animation: floatFood 5s infinite ease-in-out;
+    }
+
+    .food1 { top: 60%; left: 10%; animation-delay: 0s; }
+    .food2 { top: 70%; left: 80%; animation-delay: 1s; }
+    .food3 { top: 80%; left: 30%; animation-delay: 2s; }
+    .food4 { top: 90%; left: 60%; animation-delay: 3s; }
+
+    @keyframes floatFood {
+      0% { transform: rotate(0) translateY(0); }
+      50% { transform: rotate(10deg) translateY(-15px); }
+      100% { transform: rotate(0) translateY(0); }
+    }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .next-btn {
+      margin-top: 3rem;
+      padding: 0.8rem 1.5rem;
+      background: #ff1493;
+      color: #fff;
+      border: none;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .next-btn:hover {
+      background: #ff6bb2;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🍽️ Momo, Chatpate, Chowmein Time!</h1>
+  <p>Birthday without party jasto chai kati boring hunchha ni! Aba ta full party mood! 🎉🍜</p>
+
+  <!-- Floating foods -->
+  <img class="food food1" src="https://i.imgur.com/NlTxXxA.png" alt="Momo">
+  <img class="food food2" src="https://i.imgur.com/xP5nBYA.png" alt="Chatpate">
+  <img class="food food3" src="https://i.imgur.com/U3wKwqZ.png" alt="Chowmein">
+  <img class="food food4" src="https://i.imgur.com/oPt0Jx4.png" alt="Cold Drink">
+
+  <!-- Party music (optional) -->
+  <audio autoplay loop>
+    <source src="https://www.fesliyanstudios.com/play-mp3/6520" type="audio/mpeg" />
+  </audio>
+
+  <button class="next-btn" onclick="goNext()">➡️ Aba arko final surprise!</button>
+
+  <script>
+    function goNext() {
+      window.location.href = "gift.html"; // or wherever you want next
+    }
+  </script>
+
+</body>
+</html>
