@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kahi bigriyo jasto cha...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      background-color: #111;
+      color: #aaa;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1rem;
+      opacity: 0.6;
+      max-width: 80%;
+    }
+    #dot {
+      width: 10px;
+      height: 10px;
+      background-color: #333;
+      border-radius: 50%;
+      margin-top: 2rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Eh... yo site ta khuleko jasto cha tara...</h1>
+  <p>Ahile kehi kaam garirako jasto chhaina 😕<br>Shayad maile galti le pathako hola... aba ke garne ra?</p>
+  <p style="font-size: 0.9rem;">(Tala ko sano dot hera kasto weird xa 😅)</p>
+  <div id="dot" title="yaha ta kehi chhaina..."></div>
+
+  <script>
+    // Secret trigger: click dot 3 times
+    let clicks = 0;
+    document.getElementById("dot").addEventListener("click", () => {
+      clicks++;
+      if (clicks === 3) {
+        window.location.href = "start.html"; // Surprise starts here
+      }
+    });
+  </script>
+</body>
+</html>
