@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8" />
+  <title>🎈 Birthday Game!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: linear-gradient(to bottom, #ffeef6, #ffe6f0);
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #ff1493;
+      margin-top: 1rem;
+    }
+
+    #score {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .balloon {
+      width: 60px;
+      height: 80px;
+      background: radial-gradient(circle at 30% 30%, #ff69b4, #ff1493);
+      border-radius: 50% 50% 40% 40%;
+      position: absolute;
+      animation: float 4s linear forwards;
+      cursor: pointer;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh); opacity: 1; }
+      100% { transform: translateY(-120px); opacity: 0; }
+    }
+
+    #end-msg {
+      position: fixed;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.8rem;
+      color: #ff1493;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎈 Tap the Balloons!</h1>
+  <p id="score">Score: 0</p>
+  <div id="end-msg">🎉 Ramailo Bhayo? Aba arko surprise 🥰</div>
+
+
+
+  <script>
+    let score = 0;
+    const maxScore = 10;
+    const scoreDisplay = document.getElementById('score');
+    const endMsg = document.getElementById('end-msg');
+
+    function createBalloon() {
+      const b = document.createElement('div');
+      b.className = 'balloon';
+      b.style.left = Math.random() * 90 + 'vw';
+      document.body.appendChild(b);
+
+      b.onclick = () => {
+        score++;
+        scoreDisplay.textContent = 'Score: ' + score;
+        b.remove();
+        if (score >= maxScore) {
+          gameOver();
+        }
+      };
+
+      setTimeout(() => {
+        if (document.body.contains(b)) b.remove();
+      }, 4000);
+    }
+
+    function gameOver() {
+      clearInterval(spawnInterval);
+      endMsg.style.display = 'block';
+      setTimeout(() => {
+        window.location.href = 'gift.html';
+      }, 4000);
+    }
+
+    const spawnInterval = setInterval(createBalloon, 800);
+  </script>
+
+</body>
+</html>
